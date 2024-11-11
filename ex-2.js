@@ -1,5 +1,18 @@
 function countPositivesSumNegatives(input) {
   //Start coding here
+  if (!input || input.length === 0) {
+    return [];
+  }
+  let numPositives = 0;
+  let numNegatives = 0;
+  for (let num of input) {
+    if (num > 0) {
+      numPositives++;
+    } else if (num < 0) {
+      numNegatives += num;
+    }
+  }
+  return [numPositives, numNegatives];
 }
 
 let result1 = countPositivesSumNegatives([
